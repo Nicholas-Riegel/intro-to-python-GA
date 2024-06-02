@@ -30,11 +30,11 @@ tools = [
 
 bankAccount = 0
 playerTools = ['teeth']
-toolInuseName = 'teeth'
+toolInUseName = 'teeth'
 
 while bankAccount < 1000:
     
-    toolInuse = next((obj for obj in tools if obj['name'] == toolInuseName), None)
+    toolInuse = next((obj for obj in tools if obj['name'] == toolInUseName), None)
 
     os.system("clear")
     print("Landscaper: Your goal is to make $1000.")
@@ -43,7 +43,7 @@ while bankAccount < 1000:
     for tool in tools:
         print(tool['name'] + ": cost: $"+str(tool['cost']) +", daily income: $" + str(tool['roi']))
     print("\nYour tools are: " + ", ".join(playerTools))
-    print("\nTool in use: " + toolInuseName)
+    print("\nTool in use: " + toolInUseName)
     answer = input("\nPlease select one of the following options: \n1. Mow lawns using current tool. \n2. Purchase new tool. \n3. Select different tool.\n")
     if answer == "1":
         bankAccount += toolInuse['roi']
@@ -66,9 +66,9 @@ while bankAccount < 1000:
     elif answer == '3':
         os.system('clear')
         print("\nYour tools are: " + ", ".join(playerTools))
-        print("\nTool in use: " + toolInuseName)
+        print("\nTool in use: " + toolInUseName)
         answer3 = input("\nPlease enter the name of the tool you would like to use: ")
         if answer3 in playerTools:
-            toolInuseName = answer3
+            toolInUseName = answer3
 
 print("You win! You made over $1000!")
