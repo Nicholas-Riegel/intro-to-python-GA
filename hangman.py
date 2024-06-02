@@ -34,6 +34,7 @@ def gameLoop():
         print("Tries left: " + str(triesLeft))
         print(*outputList)
         print(wrongAnswerMessage)
+
         chosenLetter = input('Please enter a letter: ')
         chosenLetter = chosenLetter.lower()
         
@@ -47,7 +48,6 @@ def gameLoop():
         else:
             triesLeft -= 1
             wrongAnswerMessage += " " + chosenLetter
-            print('letter is not in word')
     
     os.system('clear')
     
